@@ -5,7 +5,15 @@ class Funcionario {
     private double salario;
     private Data dataEntrada;
     private String rg;
+
+    public Funcionario() {
+        
+    }
     
+    public Funcionario(String nome) {
+        this.nome = nome;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
