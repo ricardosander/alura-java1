@@ -2,7 +2,7 @@ class TestaEmpresa {
 
     public static void main(String[] args) {
        
-       Empresa empresa = new Empresa();
+       Empresa empresa = new Empresa(3);
        
        Funcionario f = new Funcionario();
        f.setNome("Primeiro");
