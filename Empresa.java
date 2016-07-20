@@ -1,10 +1,24 @@
 class Empresa {
     
-    String nome;
-    String cnpj;
-    Funcionario[] funcionarios;
+    private String nome;
+    private String cnpj;
+    private Funcionario[] funcionarios = new Funcionario[3];
 
-    void adiciona(Funcionario funcionario) {
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public Funcionario getFuncionario(int posicao) {
+
+    	if (posicao >= this.funcionarios.length) return null;
+        return this.funcionarios[posicao];
+    }
+
+    public void adiciona(Funcionario funcionario) {
 
     	label: for (int i = 0; i < this.funcionarios.length; i++) {
 
@@ -16,19 +30,19 @@ class Empresa {
         }
     }
 
-    void mostraEmpregados() {
+    public void mostraEmpregados() {
 
     	for (int i = 0; i < this.funcionarios.length; i++) {
 
     		if (this.funcionarios[i] != null) {
 
     			System.out.println("Funcionário na posição " + i + ":");
-    			System.out.println("R$ " + this.funcionarios[i].salario);
+    			System.out.println("R$ " + this.funcionarios[i].getSalario());
     		}
     	}
     }
 
-    void mostraTodasAsInformacoes() {
+    public void mostraTodasAsInformacoes() {
 
     	for (Funcionario f: this.funcionarios) {
 
@@ -38,7 +52,7 @@ class Empresa {
     	}
     }
 
-    boolean contem(Funcionario funcionario) {
+    public boolean contem(Funcionario funcionario) {
 
     	for (Funcionario f: this.funcionarios) {
     		if (f == funcionario) return true; 
