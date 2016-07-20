@@ -9,8 +9,7 @@ class TestaEmpresa {
        f.setDepartamento("RH");
        f.setSalario(100);
        f.setRg("123");
-       f.setDataEntrada(new Data());
-       f.getDataEntrada().preenche(28, 12, 2000);
+       f.setDataEntrada(new Data(28, 12, 2000));
        empresa.adiciona(f);
        
        f = new Funcionario();
@@ -18,8 +17,7 @@ class TestaEmpresa {
        f.setDepartamento("Atendimento");
        f.setSalario(90);
        f.setRg("123");
-       f.setDataEntrada(new Data());
-       f.getDataEntrada().preenche(28, 12, 2000);
+       f.setDataEntrada(new Data(28, 12, 2000));
        empresa.adiciona(f);
 
        empresa.mostraTodasAsInformacoes();
