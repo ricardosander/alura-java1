@@ -1,20 +1,48 @@
 class Funcionario {
     
-    String nome;
-    String departamento;
-    double salario;
-    Data dataEntrada;
-    String rg;
+    private String nome;
+    private String departamento;
+    private double salario;
+    private Data dataEntrada;
+    private String rg;
     
-    void recebeAumento(double aumento) {
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+    
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+    
+    public double getSalario() {
+        return this.salario;
+    }
+    
+    public void setDataEntrada(Data dataEntrada) {
+        this.dataEntrada = dataEntrada;
+    }
+    
+    public Data getDataEntrada() {
+        return this.dataEntrada;
+    }
+    
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+    
+    public void recebeAumento(double aumento) {
         this.salario += aumento;
     }
     
-    double calculaGanhoAnual() {
+    public double calculaGanhoAnual() {
         return this.salario * 12;
     }
     
-    void mostra() {
+    public void mostra() {
 
         System.out.println("Funcionário:");
         System.out.println("Nome: " + this.nome);
