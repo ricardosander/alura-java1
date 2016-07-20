@@ -23,13 +23,6 @@ class TestaEmpresa {
     f.dataEntrada.preenche(28, 12, 2000);
     empresa.adiciona(f);
     
-    for(Funcionario teste: empresa.funcionarios) {     
-
-      if (teste == null) {            
-        System.out.println("Posição vazia.");        
-      } else {            
-        teste.mostra();        
-      }
-    }
+    empresa.mostraEmpregados();
   }
 }
