@@ -23,6 +23,6 @@ class TestaEmpresa {
     f.dataEntrada.preenche(28, 12, 2000);
     empresa.adiciona(f);
     
-    empresa.mostraEmpregados();
+    empresa.mostraTodasAsInformacoes();
   }
 }

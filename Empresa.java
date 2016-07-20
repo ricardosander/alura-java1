@@ -27,4 +27,14 @@ class Empresa {
     		}
     	}
     }
+
+    void mostraTodasAsInformacoes() {
+
+    	for (Funcionario f: this.funcionarios) {
+
+    		if (f != null) {
+    			f.mostra();
+    		}
+    	}
+    }
 }
