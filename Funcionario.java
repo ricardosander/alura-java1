@@ -1,5 +1,8 @@
 class Funcionario {
-    
+
+	private static int numeroDeFuncionarios = 0;
+
+	private int identificador;
     private String nome;
     private String departamento;
     private double salario;
@@ -7,11 +10,16 @@ class Funcionario {
     private String rg;
 
     public Funcionario() {
-        
+    	this.identificador = ++Funcionario.numeroDeFuncionarios;
     }
     
     public Funcionario(String nome) {
+        this();
         this.nome = nome;
+    }
+
+    public static int getNumeroDeFunconarios() {
+    	return Funcionario.numeroDeFuncionarios;
     }
 
     public void setNome(String nome) {
@@ -52,7 +60,7 @@ class Funcionario {
     
     public void mostra() {
 
-        System.out.println("Funcionário:");
+        System.out.println("Funcionário:" + this.identificador);
         System.out.println("Nome: " + this.nome);
         System.out.println("Departamento: " + this.departamento);
         System.out.println("Salário: " + this.salario);
