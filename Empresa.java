@@ -37,4 +37,12 @@ class Empresa {
     		}
     	}
     }
+
+    boolean contem(Funcionario funcionario) {
+
+    	for (Funcionario f: this.funcionarios) {
+    		if (f == funcionario) return true; 
+    	}
+    	return false;
+    }
 }

@@ -24,5 +24,13 @@ class TestaEmpresa {
     empresa.adiciona(f);
     
     empresa.mostraTodasAsInformacoes();
+
+    if (empresa.contem(f)) {
+      System.out.println("Contém primeiro.");
+    }
+
+    if (empresa.contem(new Funcionario())) {
+      System.out.println("Contém primeiro.");
+    }
   }
 }
