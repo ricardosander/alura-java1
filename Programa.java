@@ -2,9 +2,13 @@ class Programa {
 
     public static void main(String[] args) {
         
-        for (int i = 3; i <= 100; i = i + 3) {
-        	System.out.println( i + " é divisível por 3.");
-        	
+        for (int i = 1; i <= 10; i++) {
+            
+            int fatorial = 1;
+            for (int j = i; j >= 1; j--) {
+                fatorial *= j;
+            }
+            System.out.println(i + "! = " + fatorial);
         }
     }
 }
