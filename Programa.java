@@ -19,10 +19,7 @@ class Programa {
         f1.recebeAumento(100);
         f2.recebeAumento(75);
         
-        System.out.println("Salário de " + f1.nome + ": " + f1.salario);
-        System.out.println("Ganho anual de " + f1.nome+": " + f1.calculaGanhoAnual());
-        
-        System.out.println("Salário de " + f2.nome + ": " + f2.salario);
-        System.out.println("Ganho anual de " + f2.nome+": " + f2.calculaGanhoAnual());
+        f1.mostra();
+        f2.mostra();
     }
 }
